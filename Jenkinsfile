@@ -13,19 +13,19 @@ pipeline{
 
         stage('compilation'){
             steps {
-                echo "compilation"
+               sh 'echo "compilation"'
             }
         }
 
         stage('test'){
             steps {
-                echo "test"
+                echo 'test'
             }
         }
 
         stage('package'){
             steps {
-                 echo "package"
+                 echo 'package'
             }
         }
 
