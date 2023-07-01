@@ -15,6 +15,7 @@ pipeline{
             steps {
                 sh 'java -version'
                 sh 'git --version'
+                sh 'apt-get install docker'
                 sh 'docker version'
                 sh 'pwd && ls -alh'
 
