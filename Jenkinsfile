@@ -15,20 +15,16 @@ pipeline{
             steps {
                 sh 'java -version'
                 sh 'git --version'
-                sh 'apt-get install docker'
-                sh 'docker version'
                 sh 'pwd && ls -alh'
 
             }
         }
 
         stage('compilation'){
-            agent {
-                docker { image 'maven:3-alpine'}
-            }
+
             steps {
                 sh 'pwd && ls -alh'
-                sh 'mvn -v'
+
             }
         }
 
